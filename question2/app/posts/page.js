@@ -58,8 +58,8 @@ export default function Posts() {
             href="/posts?type=popular" 
             className={`px-4 py-2 rounded-md ${
               type === 'popular' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                ? 'bg-black text-white' 
+                : 'bg-white text-black hover:bg-gray-300'
             }`}
           >
             Popular
@@ -68,8 +68,8 @@ export default function Posts() {
             href="/posts?type=latest" 
             className={`px-4 py-2 rounded-md ${
               type === 'latest' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                ? 'bg-black text-white' 
+                : 'bg-white text-black hover:bg-gray-300'
             }`}
           >
             Latest
@@ -82,7 +82,7 @@ export default function Posts() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-7">
           {posts.length > 0 ? (
             posts.map(post => (
               <PostCard key={post.id} post={post} />
